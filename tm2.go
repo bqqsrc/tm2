@@ -179,7 +179,7 @@ func getLayout(mode int) string {
 // 		dateStr = string(value)
 // 		break
 // 	default:
-// 		Log.Errorf("Error, I2DateTimeStr error, a %s value can't convert to TimeStamp", reflect.TypeOf(data))
+// 		loger.Errorf("Error, I2DateTimeStr error, a %s value can't convert to TimeStamp", reflect.TypeOf(data))
 // 		return "", false
 // 	}
 // 	var tm time.Time
@@ -187,7 +187,7 @@ func getLayout(mode int) string {
 // 		var err error
 // 		tm, err = time.Parse("2006-01-02 15:04:05", dateStr)
 // 		if err != nil {
-// 			Log.Errorf("MustDateTimeStr error, time.Parse(\"2006-01-02 15:04:05\", %s) error, err: %s", dateStr, err)
+// 			loger.Errorf("MustDateTimeStr error, time.Parse(\"2006-01-02 15:04:05\", %s) error, err: %s", dateStr, err)
 // 			ok := false
 // 			timeStamp, ok = I2Int64(dateStr)
 // 			if ok {
